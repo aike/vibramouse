@@ -32,46 +32,46 @@ History:
   First version.
 ========================================================================
 
-¡‚±‚ê‚Í‰½H
-ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ðŽ©“®“I‚É“®‚©‚µ‚ÄƒTƒCƒ“ƒJ[ƒu‚ð‘‚­ƒc[ƒ‹‚Å‚·B
-VOCALOID‚Ìƒrƒuƒ‰[ƒg‚ðŽè‘‚«‚·‚é–Ú“I‚Åì‚è‚Ü‚µ‚½B
+â– ã“ã‚Œã¯ä½•ï¼Ÿ
+ãƒžã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã‚’è‡ªå‹•çš„ã«å‹•ã‹ã—ã¦ã‚µã‚¤ãƒ³ã‚«ãƒ¼ãƒ–ã‚’æ›¸ããƒ„ãƒ¼ãƒ«ã§ã™ã€‚
+VOCALOIDã®ãƒ“ãƒ–ãƒ©ãƒ¼ãƒˆã‚’æ‰‹æ›¸ãã™ã‚‹ç›®çš„ã§ä½œã‚Šã¾ã—ãŸã€‚
 
-¡ƒCƒ“ƒXƒg[ƒ‹
-ƒCƒ“ƒXƒg[ƒ‹‚Í“Á‚É•K—v‚ ‚è‚Ü‚¹‚ñB”CˆÓ‚ÌƒtƒHƒ‹ƒ_‚Évibramouse.exe‚Ævibramouselib.dll
-‚ð’u‚¢‚ÄŽÀs‚·‚é‚¾‚¯‚Å‚·BWindowsƒtƒHƒ‹ƒ_‚ÉŽ©“®“I‚Évibramouse.ini‚ªì¬‚³‚ê‚Ü‚·B
+â– ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã¯ç‰¹ã«å¿…è¦ã‚ã‚Šã¾ã›ã‚“ã€‚ä»»æ„ã®ãƒ•ã‚©ãƒ«ãƒ€ã«vibramouse.exeã¨vibramouselib.dll
+ã‚’ç½®ã„ã¦å®Ÿè¡Œã™ã‚‹ã ã‘ã§ã™ã€‚Windowsãƒ•ã‚©ãƒ«ãƒ€ã«è‡ªå‹•çš„ã«vibramouse.iniãŒä½œæˆã•ã‚Œã¾ã™ã€‚
 
-ƒŒƒWƒXƒgƒŠ‚ÍŽg—p‚µ‚Ü‚¹‚ñBƒAƒ“ƒCƒ“ƒXƒg[ƒ‹‚ÍAvibramouse.exe‚Ævibramouselib.dllA
-WindowsƒtƒHƒ‹ƒ_‚Ìvibramouse.ini‚ðíœ‚µ‚Ä‚­‚¾‚³‚¢B
+ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã¯ä½¿ç”¨ã—ã¾ã›ã‚“ã€‚ã‚¢ãƒ³ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã¯ã€vibramouse.exeã¨vibramouselib.dllã€
+Windowsãƒ•ã‚©ãƒ«ãƒ€ã®vibramouse.iniã‚’å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚
 
-¡‘€ì•û–@
-ƒfƒtƒHƒ‹ƒg‚Å‚ÍAALT + Z ƒL[‚ð‰Ÿ‚·‚Æƒ}ƒEƒX‚ª—h‚ê‚È‚ª‚ç‰E‘¤‚ÉˆÚ“®‚µ‚Ü‚·B
-ƒ^ƒCƒ~ƒ“ƒO‚ð‡‚í‚¹‚Ä¶ƒNƒŠƒbƒN‚·‚é‚ÆƒTƒCƒ“ƒJ[ƒu‚ª•`‰æ‚Å‚«‚é‚ÆŽv‚¢‚Ü‚·B
+â– æ“ä½œæ–¹æ³•
+ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã€ALT + Z ã‚­ãƒ¼ã‚’æŠ¼ã™ã¨ãƒžã‚¦ã‚¹ãŒæºã‚ŒãªãŒã‚‰å³å´ã«ç§»å‹•ã—ã¾ã™ã€‚
+ã‚¿ã‚¤ãƒŸãƒ³ã‚°ã‚’åˆã‚ã›ã¦å·¦ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã‚µã‚¤ãƒ³ã‚«ãƒ¼ãƒ–ãŒæç”»ã§ãã‚‹ã¨æ€ã„ã¾ã™ã€‚
 
-¡ƒpƒ‰ƒ[ƒ^à–¾
-‘€ì‚µ‚Ä‚Ý‚é‚Æ‚·‚®—‰ð‚Å‚«‚é‚ÆŽv‚¢‚Ü‚·‚ªA‚»‚ê‚¼‚ê‚Ìƒpƒ‰ƒ[ƒ^‚ÍŽŸ‚ÌˆÓ–¡‚ðŽ‚¿‚Ü‚·B
-@’·‚³@…•½•ûŒü‚Ì‹——£‚Å‚·
-@ŽüŠú@U“®‚·‚éŽüŠú‚Å‚·
-@U•@‚’¼•ûŒü‚ÉU“®‚·‚é•‚Å‚·
-@‘•@™X‚ÉU•‚ð‘‰Á‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚·
-@ã‰º@U“®‚Ì’†S‚ðŒX‚¯‚Ü‚·B
-@‰º~@U“®‚Ì’†S‚ðŽw”ŠÖ”“I‚É‰º‚°‚Ü‚·B
+â– ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿èª¬æ˜Ž
+æ“ä½œã—ã¦ã¿ã‚‹ã¨ã™ãç†è§£ã§ãã‚‹ã¨æ€ã„ã¾ã™ãŒã€ãã‚Œãžã‚Œã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã¯æ¬¡ã®æ„å‘³ã‚’æŒã¡ã¾ã™ã€‚
+ã€€é•·ã•ã€€æ°´å¹³æ–¹å‘ã®è·é›¢ã§ã™
+ã€€å‘¨æœŸã€€æŒ¯å‹•ã™ã‚‹å‘¨æœŸã§ã™
+ã€€æŒ¯å¹…ã€€åž‚ç›´æ–¹å‘ã«æŒ¯å‹•ã™ã‚‹å¹…ã§ã™
+ã€€å¢—å¹…ã€€å¾ã€…ã«æŒ¯å¹…ã‚’å¢—åŠ ã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™
+ã€€ä¸Šä¸‹ã€€æŒ¯å‹•ã®ä¸­å¿ƒã‚’å‚¾ã‘ã¾ã™ã€‚
+ã€€ä¸‹é™ã€€æŒ¯å‹•ã®ä¸­å¿ƒã‚’æŒ‡æ•°é–¢æ•°çš„ã«ä¸‹ã’ã¾ã™ã€‚
 
-¡ƒJƒXƒ^ƒ}ƒCƒY
-sample_vibramouse.ini‚ðŽQl‚É‚µ‚ÄAvibramouse.ini‚ÉˆÈ‰º‚Ìƒpƒ‰ƒ[ƒ^‚ð’Ç‰Á‚·‚é‚Æ
-ƒJƒXƒ^ƒ}ƒCƒY‚ª‚Å‚«‚Ü‚·B
+â– ã‚«ã‚¹ã‚¿ãƒžã‚¤ã‚º
+sample_vibramouse.iniã‚’å‚è€ƒã«ã—ã¦ã€vibramouse.iniã«ä»¥ä¸‹ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’è¿½åŠ ã™ã‚‹ã¨
+ã‚«ã‚¹ã‚¿ãƒžã‚¤ã‚ºãŒã§ãã¾ã™ã€‚
 
-ƒL[ƒAƒTƒCƒ“‚Ìƒpƒ‰ƒ[ƒ^‚Å‚·BModifire‚É‚ÍALT/SHIFT/CTRL‚ªŽw’è‚Å‚«‚Ü‚·B
-ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚·‚Å‚ÉŽg—p‚³‚ê‚Ä‚¢‚éƒVƒ‡[ƒgƒJƒbƒgƒL[‚Æd‚È‚ç‚È‚¢‚æ‚¤‚É
-‚µ‚Ä‚­‚¾‚³‚¢B
-@[Config]
-@Key=Z
-@Modifire=ALT
+ã‚­ãƒ¼ã‚¢ã‚µã‚¤ãƒ³ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã§ã™ã€‚Modifireã«ã¯ALT/SHIFT/CTRLãŒæŒ‡å®šã§ãã¾ã™ã€‚
+ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã™ã§ã«ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ã¨é‡ãªã‚‰ãªã„ã‚ˆã†ã«
+ã—ã¦ãã ã•ã„ã€‚
+ã€€[Config]
+ã€€Key=Z
+ã€€Modifire=ALT
 
-ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ðˆÚ“®‚³‚¹‚é‘¬“x‚ðŽw’è‚µ‚Ü‚·BƒfƒtƒHƒ‹ƒg‚Í20‚Å‚·B
-@[Config]
-@Speed=20
+ãƒžã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã‚’ç§»å‹•ã•ã›ã‚‹é€Ÿåº¦ã‚’æŒ‡å®šã—ã¾ã™ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯20ã§ã™ã€‚
+ã€€[Config]
+ã€€Speed=20
 
-¡ŠJ”­ŠÂ‹«
+â– é–‹ç™ºç’°å¢ƒ
 Windows XP
 Visual C++ 2008 Express Edition
 
