@@ -75,4 +75,7 @@ sample_vibramouse.iniを参考にして、vibramouse.iniに以下のパラメー
 Windows XP
 Visual C++ 2008 Express Edition
 
+■配布元
+http://github.com/aike/vibramouse/tree/master
+
 ========================================================================
