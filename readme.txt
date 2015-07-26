@@ -3,6 +3,7 @@
 VibraMouse - mouse cursor vibration tool
 
 Copyright (C) 2009 aike. All rights reserved.
+Copyright (C) 2015 IceImo-P. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -30,6 +31,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 History:
 2009-08-23
   First version.
+2015-07-26
+  Supports Windows Vista or later under running UAC.
+  Change vibramouse.ini file location to <user_home>\AppData\Roaming\vibramouse.
 ========================================================================
 
 ■これは何？
@@ -38,10 +42,12 @@ VOCALOIDのビブラートを手書きする目的で作りました。
 
 ■インストール
 インストールは特に必要ありません。任意のフォルダにvibramouse.exeとvibramouselib.dll
-を置いて実行するだけです。Windowsフォルダに自動的にvibramouse.iniが作成されます。
+を置いて実行するだけです。
+ユーザフォルダの AppData\Roaming に自動的にvibramouseフォルダおよびvibramouse.iniが
+作成されます。
 
 レジストリは使用しません。アンインストールは、vibramouse.exeとvibramouselib.dll、
-Windowsフォルダのvibramouse.iniを削除してください。
+ユーザフォルダの AppData\Roaming にある vibramouse フォルダを削除してください。
 
 ■操作方法
 デフォルトでは、ALT + Z キーを押すとマウスが揺れながら右側に移動します。
@@ -75,7 +81,31 @@ sample_vibramouse.iniを参考にして、vibramouse.iniに以下のパラメー
 Windows XP
 Visual C++ 2008 Express Edition
 
+Windows 7 Professional SP1 (64-bit)
+Visual Studio 2013 Community Edition
+
 ■配布元
 http://github.com/aike/vibramouse/tree/master
 
 ========================================================================
+
+------------------------------------------------------------------------
+
+[2015-07-26 IceImo-P(アイス芋P)による変更内容]
+
+vibramouse.ini の保存場所を、Windowsフォルダより、
+ユーザーフォルダの AppData\Roaming\vibramouse に変更しました。
+この変更により、ユーザアカウント制御(UAC)が有効な
+Windows Vista 以降でも動作することを期待しています。
+
+以前のバージョンより上書き更新した場合、一時的に設定内容が初期化
+されます（一時的に見えなくなるだけで、消えてはいません）。
+以前のバージョンの設定を復元するために、Windowsフォルダにある
+vibramouse.ini を、ユーザーフォルダの
+AppData\Roaming\vibramouse フォルダへ上書きコピーしてください。
+
+○開発・動作確認環境
+Windows 7 Professional SP1 (64-bit)
+Visual Studio 2013 Community Edition
+
+------------------------------------------------------------------------
