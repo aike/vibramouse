@@ -1,12 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vibramouse", "vibramouse\vibramouse.vcproj", "{126C4394-72D8-480B-B5CD-A54F52FD637E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{16D04549-45C0-4AFC-94D8-94F96A28BD9D} = {16D04549-45C0-4AFC-94D8-94F96A28BD9D}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vibramouse", "vibramouse\vibramouse.vcxproj", "{126C4394-72D8-480B-B5CD-A54F52FD637E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vibramouselib", "vibramouselib\vibramouselib.vcproj", "{16D04549-45C0-4AFC-94D8-94F96A28BD9D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vibramouselib", "vibramouselib\vibramouselib.vcxproj", "{16D04549-45C0-4AFC-94D8-94F96A28BD9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
