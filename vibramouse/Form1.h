@@ -492,71 +492,79 @@ namespace vibramouse {
 			LPWSTR name[4] = {L"Bank1", L"Bank2", L"Bank3", L"Bank4" };
 			WCHAR wc[20];
 			LPWSTR s = wc;
+			LPCTSTR inifile = vibramouseSetupIniFilePath();
 			wsprintf(s, L"%d", bank[sel].len);
-			WritePrivateProfileString(name[sel], L"Length",	   s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Length",	   s, inifile);
 			wsprintf(s, L"%d", bank[sel].freq);
-			WritePrivateProfileString(name[sel], L"Frequency", s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Frequency", s, inifile);
 			wsprintf(s, L"%d", bank[sel].amp);
-			WritePrivateProfileString(name[sel], L"Amplitude", s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Amplitude", s, inifile);
 			wsprintf(s, L"%d", bank[sel].cres);
-			WritePrivateProfileString(name[sel], L"Crescendo", s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Crescendo", s, inifile);
 			wsprintf(s, L"%d", bank[sel].pitch);
-			WritePrivateProfileString(name[sel], L"Pitch",	   s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Pitch",	   s, inifile);
 			wsprintf(s, L"%d", bank[sel].down);
-			WritePrivateProfileString(name[sel], L"Down",	   s, INIFILE);
+			WritePrivateProfileString(name[sel], L"Down",	   s, inifile);
 			wsprintf(s, L"%d", sel);
-			WritePrivateProfileString(INIPARAM, L"Bank", s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Bank", s, inifile);
+			delete[] inifile;
 		}
 		void setParameter(void)
 		{
 			WCHAR wc[20];
 			LPWSTR s = wc;
+			LPCTSTR inifile = vibramouseSetupIniFilePath();
 			wsprintf(s, L"%d", len);
-			WritePrivateProfileString(INIPARAM, L"Length",		s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Length",		s, inifile);
 			wsprintf(s, L"%d", freq);
-			WritePrivateProfileString(INIPARAM, L"Frequency",	s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Frequency",	s, inifile);
 			wsprintf(s, L"%d", amp);
-			WritePrivateProfileString(INIPARAM, L"Amplitude",	s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Amplitude",	s, inifile);
 			wsprintf(s, L"%d", cres);
-			WritePrivateProfileString(INIPARAM, L"Crescendo",	s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Crescendo",	s, inifile);
 			wsprintf(s, L"%d", pitch);
-			WritePrivateProfileString(INIPARAM, L"Pitch",		s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Pitch",		s, inifile);
 			wsprintf(s, L"%d", down);
-			WritePrivateProfileString(INIPARAM, L"Down",		s, INIFILE);
+			WritePrivateProfileString(INIPARAM, L"Down",		s, inifile);
 			// バッファのフラッシュ
-			WritePrivateProfileString(NULL, NULL, NULL,		   INIFILE);
+			WritePrivateProfileString(NULL, NULL, NULL,		   inifile);
+			delete[] inifile;
 		}
 		void getParameter(void)
 		{
-			bank[0].len   = GetPrivateProfileInt(L"Bank1", L"Length",	 70, INIFILE);
-			bank[0].freq  = GetPrivateProfileInt(L"Bank1", L"Frequency", 70, INIFILE);
-			bank[0].amp   = GetPrivateProfileInt(L"Bank1", L"Amplitude", 30, INIFILE);
-			bank[0].cres  = GetPrivateProfileInt(L"Bank1", L"Crescendo",100, INIFILE);
-			bank[0].pitch = GetPrivateProfileInt(L"Bank1", L"Pitch",	 50, INIFILE);
-			bank[0].down  = GetPrivateProfileInt(L"Bank1", L"Down",		  0, INIFILE);
+			LPCTSTR inifile = vibramouseSetupIniFilePath();
 
-			bank[1].len   = GetPrivateProfileInt(L"Bank2", L"Length",	 70, INIFILE);
-			bank[1].freq  = GetPrivateProfileInt(L"Bank2", L"Frequency", 70, INIFILE);
-			bank[1].amp   = GetPrivateProfileInt(L"Bank2", L"Amplitude", 30, INIFILE);
-			bank[1].cres  = GetPrivateProfileInt(L"Bank2", L"Crescendo",100, INIFILE);
-			bank[1].pitch = GetPrivateProfileInt(L"Bank2", L"Pitch",	 50, INIFILE);
-			bank[1].down  = GetPrivateProfileInt(L"Bank2", L"Down",		  0, INIFILE);
+			bank[0].len   = GetPrivateProfileInt(L"Bank1", L"Length",	 70, inifile);
+			bank[0].freq  = GetPrivateProfileInt(L"Bank1", L"Frequency", 70, inifile);
+			bank[0].amp   = GetPrivateProfileInt(L"Bank1", L"Amplitude", 30, inifile);
+			bank[0].cres  = GetPrivateProfileInt(L"Bank1", L"Crescendo",100, inifile);
+			bank[0].pitch = GetPrivateProfileInt(L"Bank1", L"Pitch",	 50, inifile);
+			bank[0].down  = GetPrivateProfileInt(L"Bank1", L"Down",		  0, inifile);
 
-			bank[2].len   = GetPrivateProfileInt(L"Bank3", L"Length",	 70, INIFILE);
-			bank[2].freq  = GetPrivateProfileInt(L"Bank3", L"Frequency", 70, INIFILE);
-			bank[2].amp   = GetPrivateProfileInt(L"Bank3", L"Amplitude", 30, INIFILE);
-			bank[2].cres  = GetPrivateProfileInt(L"Bank3", L"Crescendo",100, INIFILE);
-			bank[2].pitch = GetPrivateProfileInt(L"Bank3", L"Pitch",	 50, INIFILE);
-			bank[2].down  = GetPrivateProfileInt(L"Bank3", L"Down",		  0, INIFILE);
+			bank[1].len   = GetPrivateProfileInt(L"Bank2", L"Length",	 70, inifile);
+			bank[1].freq  = GetPrivateProfileInt(L"Bank2", L"Frequency", 70, inifile);
+			bank[1].amp   = GetPrivateProfileInt(L"Bank2", L"Amplitude", 30, inifile);
+			bank[1].cres  = GetPrivateProfileInt(L"Bank2", L"Crescendo",100, inifile);
+			bank[1].pitch = GetPrivateProfileInt(L"Bank2", L"Pitch",	 50, inifile);
+			bank[1].down  = GetPrivateProfileInt(L"Bank2", L"Down",		  0, inifile);
 
-			bank[3].len   = GetPrivateProfileInt(L"Bank4", L"Length",	 70, INIFILE);
-			bank[3].freq  = GetPrivateProfileInt(L"Bank4", L"Frequency", 70, INIFILE);
-			bank[3].amp   = GetPrivateProfileInt(L"Bank4", L"Amplitude", 30, INIFILE);
-			bank[3].cres  = GetPrivateProfileInt(L"Bank4", L"Crescendo",100, INIFILE);
-			bank[3].pitch = GetPrivateProfileInt(L"Bank4", L"Pitch",	 50, INIFILE);
-			bank[3].down  = GetPrivateProfileInt(L"Bank4", L"Down",		  0, INIFILE);
+			bank[2].len   = GetPrivateProfileInt(L"Bank3", L"Length",	 70, inifile);
+			bank[2].freq  = GetPrivateProfileInt(L"Bank3", L"Frequency", 70, inifile);
+			bank[2].amp   = GetPrivateProfileInt(L"Bank3", L"Amplitude", 30, inifile);
+			bank[2].cres  = GetPrivateProfileInt(L"Bank3", L"Crescendo",100, inifile);
+			bank[2].pitch = GetPrivateProfileInt(L"Bank3", L"Pitch",	 50, inifile);
+			bank[2].down  = GetPrivateProfileInt(L"Bank3", L"Down",		  0, inifile);
 
-			selBank = GetPrivateProfileInt(INIPARAM, L"Bank", 0, INIFILE);
+			bank[3].len   = GetPrivateProfileInt(L"Bank4", L"Length",	 70, inifile);
+			bank[3].freq  = GetPrivateProfileInt(L"Bank4", L"Frequency", 70, inifile);
+			bank[3].amp   = GetPrivateProfileInt(L"Bank4", L"Amplitude", 30, inifile);
+			bank[3].cres  = GetPrivateProfileInt(L"Bank4", L"Crescendo",100, inifile);
+			bank[3].pitch = GetPrivateProfileInt(L"Bank4", L"Pitch",	 50, inifile);
+			bank[3].down  = GetPrivateProfileInt(L"Bank4", L"Down",		  0, inifile);
+
+			selBank = GetPrivateProfileInt(INIPARAM, L"Bank", 0, inifile);
+
+			delete[] inifile;
 
 			len   = bank[selBank].len;
 			freq  = bank[selBank].freq;
