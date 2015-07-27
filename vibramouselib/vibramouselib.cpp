@@ -29,8 +29,14 @@
 #include "stdafx.h"
 #include<cmath>
 #include <mmsystem.h>
+#include <tchar.h>
+#include <minwinbase.h>
+#include <shlobj.h>
 #pragma comment(lib,"winmm.lib")
 #include "vibramouselib.h"
+
+#define INIFILE_DEFAULT		L"vibramouse.ini"
+#define INIFILE_RELPATH		L"\\vibramouse\\vibramouse.ini"
 
 void CALLBACK vibramouseMoveMouse(UINT uID, UINT uMsg, DWORD dwUser, DWORD dw1,DWORD dw2);
 void vibramouseDoVibration(void);
@@ -71,12 +77,15 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 {
 	hInst = hModule;
 	WCHAR buf[8];
+	LPCTSTR inifile = NULL;
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		GetPrivateProfileString(INICONFIG, L"Key", L"Z", buf, 8, INIFILE);
+		inifile = vibramouseSetupIniFilePath();
+		GetPrivateProfileString(INICONFIG, L"Key", L"Z", buf, 8, inifile);
 		configKey = buf[0];
-		GetPrivateProfileString(INICONFIG, L"Modifire", L"ALT", buf, 8, INIFILE);
+		GetPrivateProfileString(INICONFIG, L"Modifire", L"ALT", buf, 8, inifile);
+		delete[] inifile;
 		if (lstrcmp(buf, L"SHIFT") == 0) {
 			configModifire = VK_SHIFT;
 		} else if (lstrcmp(buf, L"CTRL") == 0) {
@@ -155,14 +164,18 @@ void CALLBACK vibramouseMoveMouse(UINT uID, UINT uMsg, DWORD dwUser, DWORD dw1, 
 
 void vibramouseGetParameter(void)
 {
-	int len   = GetPrivateProfileInt(INIPARAM, L"Length",		0, INIFILE);
-	int freq  = GetPrivateProfileInt(INIPARAM, L"Frequency",	0, INIFILE);
-	int amp   = GetPrivateProfileInt(INIPARAM, L"Amplitude",	0, INIFILE);
-	int cres  = GetPrivateProfileInt(INIPARAM, L"Crescendo",	0, INIFILE);
-	int pitch = GetPrivateProfileInt(INIPARAM, L"Pitch",		0, INIFILE);
-	int down  = GetPrivateProfileInt(INIPARAM, L"Down",			0, INIFILE);
+	LPCTSTR inifile = vibramouseSetupIniFilePath();
 
-	paramSpeed = GetPrivateProfileInt(INICONFIG, L"Speed",	   20, INIFILE);
+	int len   = GetPrivateProfileInt(INIPARAM, L"Length",		0, inifile);
+	int freq  = GetPrivateProfileInt(INIPARAM, L"Frequency",	0, inifile);
+	int amp   = GetPrivateProfileInt(INIPARAM, L"Amplitude",	0, inifile);
+	int cres  = GetPrivateProfileInt(INIPARAM, L"Crescendo",	0, inifile);
+	int pitch = GetPrivateProfileInt(INIPARAM, L"Pitch",		0, inifile);
+	int down  = GetPrivateProfileInt(INIPARAM, L"Down",			0, inifile);
+
+	paramSpeed = GetPrivateProfileInt(INICONFIG, L"Speed",	   20, inifile);
+
+	delete[] inifile;
 
 	paramLen = (double)len * 2 + 50;
 	paramFreq = (double)(freq + 1) * 0.01;
@@ -205,4 +218,46 @@ void vibramouseCalcNextPoint(int count0, int point0, int& sx, int& sy)
 	sy = y0 - oy;
 	ox = x0;
 	oy = y0;
+}
+
+
+LPCTSTR vibramouseSetupIniFilePath(void)
+{
+	// Create buffer for retrieve full path of INI file.
+	const int bufferLength = MAX_PATH + 1;
+	LPTSTR path = new TCHAR[bufferLength];
+	::ZeroMemory(path, bufferLength);
+
+	// Retrieve User Application Data Folder path (Typically C:\Users\<username>\AppData)
+	HRESULT hResult = S_OK;
+	hResult = SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, 0, path);
+	if (hResult != S_OK) {
+		// If failed, Return default value(Maybe directing Windows folder...)
+		return INIFILE_DEFAULT;
+	}
+
+	// Check Buffer space
+	if (_tcslen(path) + _tcslen(INIFILE_DEFAULT) < bufferLength) {
+		// Make full path of INI file.
+		_tcscat_s(path, bufferLength, INIFILE_RELPATH);
+		// MessageBox(hWnd, path, TEXT("[DEBUG]INIFILE"), MB_OK);
+
+		// Create Directory of path
+		LPTSTR dirPath = new TCHAR[bufferLength];
+		memcpy(dirPath, path, bufferLength);
+		TCHAR* lastBackslash = _tcsrchr(dirPath, _T('\\'));
+		if (lastBackslash != NULL) {
+			*lastBackslash = _T('\0');
+		}
+		// MessageBox(hWnd, dirPath, TEXT("[DEBUG]INIFILE DIR"), MB_OK);
+		::CreateDirectory(dirPath, NULL);
+		delete[] dirPath;
+
+		// Complete!
+		return path;
+	}
+	else {
+		// Prevent Buffer Overrun
+		return INIFILE_DEFAULT;
+	}
 }
